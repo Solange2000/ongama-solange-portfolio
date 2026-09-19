@@ -49,7 +49,7 @@ export function PortfolioPage() {
 
       <section id="contact" className="contact-section section-wrap"><Reveal><div className="contact-panel"><div><p className="eyebrow">05 / Start a conversation</p><h2>Let&apos;s make something<br /><span>useful together.</span></h2><p className="contact-copy">Open to roles and collaborative projects in software development.</p></div><a className="contact-email" href="mailto:ongamasolange240@gmail.com">ongamasolange240@gmail.com <ArrowUpRight size={21} /></a><div className="contact-mark">OS</div></div></Reveal></section>
 
-      <footer className="footer section-wrap"><span>© {new Date().getFullYear()} Ongama Solange</span><span>Gqeberha, South Africa</span><div className="footer-links"><a href="mailto:ongamasolange240@gmail.com">Email</a><a href="#projects">Projects</a><a href="#home">Back to top <ArrowDown size={14} className="back-arrow" /></a></div></footer>
+      <footer className="footer section-wrap"><span>© {new Date().getFullYear()} Ongama Solange</span><span>Gqeberha, South Africa</span><div className="footer-links"><a href="https://github.com/Solange2000" target="_blank" rel="noreferrer">GitHub</a><a href="https://wa.me/27660423770" target="_blank" rel="noreferrer">WhatsApp</a><a href="mailto:ongamasolange240@gmail.com">Email</a><a href="#home">Back to top <ArrowDown size={14} className="back-arrow" /></a></div></footer>
     </main>
   );
 }

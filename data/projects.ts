@@ -10,23 +10,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     number: '01',
-    title: 'TaskFlow Mobile App',
-    description: 'Cross-platform productivity app for managing tasks with real-time sync and user authentication.',
-    technologies: ['Flutter', 'Firebase', 'Dart'],
-    accent: 'coral',
-  },
-  {
-    number: '02',
-    title: 'Student Portal Web',
-    description: 'Web application for course management and student enrolment with SQL database backend.',
-    technologies: ['JavaScript', 'SQL', 'HTML5', 'CSS3'],
+    title: 'Ongama Solange Portfolio',
+    description: 'A responsive personal portfolio for presenting software development work, experience, and contact details.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     accent: 'blue',
-  },
-  {
-    number: '03',
-    title: 'Inventory System',
-    description: 'Desktop application for inventory tracking, stock management and reporting.',
-    technologies: ['C#', 'SQL', '.NET'],
-    accent: 'yellow',
+    availableLinks: { github: 'https://github.com/Solange2000/ongama-solange-portfolio' },
   },
 ];
