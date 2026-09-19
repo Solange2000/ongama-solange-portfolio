@@ -16,4 +16,12 @@ export const projects: Project[] = [
     accent: 'blue',
     availableLinks: { github: 'https://github.com/Solange2000/ongama-solange-portfolio' },
   },
+  {
+    number: '02',
+    title: 'VW YES Trainee Training Tracker',
+    description: 'Training tracker for new trainees.',
+    technologies: ['JavaScript'],
+    accent: 'coral',
+    availableLinks: { github: 'https://github.com/Solange2000/Training-tracker' },
+  },
 ];
