@@ -43,7 +43,40 @@ export function PortfolioPage() {
 
       <section id="skills" className="skills-section section-block"><div className="section-wrap"><Reveal><p className="eyebrow">02 / Toolkit</p><div className="section-heading-row"><h2>Technologies &amp; <span>tools I use.</span></h2><p>Tools are only useful when they help make the work clearer. These are the technologies I currently build with.</p></div></Reveal><div className="skills-grid">{skills.map((skill, index) => { const Icon = skill.icon; return <Reveal key={skill.name} delay={index * .035}><div className="skill-card"><Icon size={20} strokeWidth={1.7} /><span>{skill.name}</span><small>{skill.category}</small></div></Reveal>; })}</div></div></section>
 
-      <section id="experience" className="experience section-wrap section-block" aria-labelledby="experience-title"><Reveal><p className="eyebrow">03 / Experience</p><div className="section-heading-row"><h2 id="experience-title">Where I&apos;ve<br /><span>been learning.</span></h2></div></Reveal><div className="experience-layout"><div className="timeline-line" />{experience.map((item) => <Reveal key={`${item.company}-${item.role}`} className="experience-item"><div className="timeline-dot" /><div className="experience-period">{item.period}</div><div><p className="eyebrow">{item.company}</p><h3>{item.role}</h3><p>{item.description}</p></div><BriefcaseBusiness className="experience-icon" size={30} aria-hidden="true" /></Reveal>)}{education.map((item) => <Reveal key={`${item.institution}-${item.qualification}`} className="education-item"><div className="timeline-dot" /><div className="experience-period">Education</div><div><p className="eyebrow">{item.institution}</p><h3>{item.qualification}</h3></div></Reveal>)}</div></section>
+      <section id="experience" className="experience section-wrap section-block" aria-labelledby="experience-title">
+        <Reveal>
+          <p className="eyebrow">03 / Experience</p>
+          <div className="section-heading-row">
+            <h2 id="experience-title">Where I&apos;ve<br /><span>been learning.</span></h2>
+            <p className="experience-summary">A concise record of my professional experience and ICT application development education.</p>
+          </div>
+        </Reveal>
+        <div className="experience-layout">
+          <div className="timeline-line" aria-hidden="true" />
+          {experience.map((item) => (
+            <Reveal key={`${item.company}-${item.role}`} className="experience-item">
+              <div className="timeline-dot" aria-hidden="true" />
+              <div className="experience-period">{item.period}</div>
+              <div className="experience-details">
+                <p className="eyebrow">{item.company}</p>
+                <h3>{item.role}</h3>
+                <p>{item.description}</p>
+              </div>
+              <BriefcaseBusiness className="experience-icon" size={30} aria-hidden="true" />
+            </Reveal>
+          ))}
+          {education.map((item) => (
+            <Reveal key={`${item.institution}-${item.qualification}`} className="education-item">
+              <div className="timeline-dot" aria-hidden="true" />
+              <div className="experience-period">Education</div>
+              <div className="experience-details">
+                <p className="eyebrow">{item.institution}</p>
+                <h3>{item.qualification}</h3>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
 
       <section id="projects" className="projects-section section-block"><div className="section-wrap"><Reveal><p className="eyebrow">04 / Selected work</p><div className="section-heading-row"><h2>Projects with<br /><span>room to grow.</span></h2><p>A collection of portfolio projects representing my interest in useful, practical software. More work is on the way.</p></div></Reveal><div className="projects-grid">{projects.map((project, index) => <Reveal key={project.title} delay={index * .1}><ProjectCard project={project} /></Reveal>)}</div></div></section>
 
