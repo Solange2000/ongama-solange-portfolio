@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#11253d"/>
+  <circle cx="1040" cy="-40" r="330" fill="none" stroke="#70bce0" stroke-opacity=".35" stroke-width="2"/>
+  <circle cx="1040" cy="-40" r="270" fill="none" stroke="#70bce0" stroke-opacity=".18" stroke-width="2"/>
+  <text x="72" y="108" fill="#70bce0" font-family="Arial, sans-serif" font-size="28" font-weight="700">OS</text>
+  <text x="72" y="230" fill="#70bce0" font-family="Arial, sans-serif" font-size="22" letter-spacing="5">IT GRADUATE / SOFTWARE DEVELOPER</text>
+  <text x="72" y="335" fill="#ffffff" font-family="Arial, sans-serif" font-size="76" font-weight="700">Ongama Solange</text>
+  <text x="72" y="425" fill="#70bce0" font-family="Arial, sans-serif" font-size="76" font-weight="700">builds with purpose.</text>
+  <text x="72" y="535" fill="#b8cbd5" font-family="Arial, sans-serif" font-size="24">Flutter &amp; Web Developer / Gqeberha, South Africa</text>
+</svg>

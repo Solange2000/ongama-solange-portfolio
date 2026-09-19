@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     description: 'Building user-focused, scalable, and high-performance software solutions.',
     type: 'website',
     url: 'https://ongama-solange-portfolio.vercel.app',
-    images: [{ url: '/opengraph-image' }],
+    images: [{ url: '/og-image.svg', width: 1200, height: 630, alt: 'Ongama Solange | Software Developer' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ongama Solange | Software Developer',
     description: 'Building user-focused, scalable, and high-performance software solutions.',
-    images: ['/opengraph-image'],
+    images: ['/og-image.svg'],
   },
 };
 
