@@ -10,7 +10,7 @@ const accentStyles = {
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card">
-      <div className={accentStyles[project.accent as keyof typeof accentStyles]}>
+      <div className={accentStyles[project.accent]}>
         <span className="project-number">{project.number}</span>
         <div className="visual-window"><span /><span /><span /></div>
         <div className="visual-lines"><i /><i /><i /></div>

@@ -27,11 +27,11 @@ export function Navbar() {
         <a className="nav-contact" href="mailto:ongamasolange240@gmail.com">
           Get in touch <ArrowUpRight size={15} aria-hidden="true" />
         </a>
-        <button className="menu-button" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} onClick={() => setOpen(!open)}>
+        <button className="menu-button" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}>
           {open ? <X size={21} /> : <Menu size={21} />}
         </button>
       </nav>
-      {open && <div className="mobile-menu">{links.map((link) => <a key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</a>)}</div>}
+      {open && <div className="mobile-menu" id="mobile-navigation">{links.map((link) => <a key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</a>)}</div>}
     </header>
   );
 }

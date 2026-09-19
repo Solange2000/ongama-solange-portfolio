@@ -1,9 +1,10 @@
+
 export interface Project {
   number: string;
   title: string;
   description: string;
   technologies: string[];
-  accent: string;
+  accent: 'coral' | 'blue' | 'yellow';
   availableLinks?: { github?: string; demo?: string };
 }
 

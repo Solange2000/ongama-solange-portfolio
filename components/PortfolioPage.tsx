@@ -19,7 +19,7 @@ export function PortfolioPage() {
         <div className="hero-copy">
           <motion.div className="status-pill" initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .55 }}><span className="status-dot" /> Available for opportunities</motion.div>
           <motion.p className="hero-kicker" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .15 }}>IT GRADUATE <span>/</span> SOFTWARE DEVELOPER</motion.p>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .2, duration: .7 }}>Building software<br /><em>with purpose.</em></motion.h1>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .2, duration: .7 }}>Ongama Solange<br /><em>builds with purpose.</em></motion.h1>
           <motion.p className="hero-lede" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .35, duration: .6 }}>I&apos;m Ongama Solange, a developer creating user-focused, scalable, and high-performance software solutions.</motion.p>
           <motion.div className="hero-actions" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .48 }}>
             <a href="#projects" className="button button-primary">View projects <ArrowUpRight size={17} /></a>
