@@ -45,6 +45,7 @@ h1 em, h2 span { color: var(--blue); font-style: normal; }
 
 .hero-art { position: relative; min-height: 470px; display: grid; place-items: center; }
 .profile-placeholder { position: relative; width: min(100%, 390px); aspect-ratio: .84; overflow: hidden; display: grid; place-items: center; border-radius: 8px; background: #c8e7f5; box-shadow: 23px 24px 0 #e5f1f5; transform: rotate(3deg); }
+.profile-placeholder img { object-fit: cover; }
 .profile-grid { position: absolute; inset: 0; opacity: .42; background: repeating-linear-gradient(90deg, transparent 0 38px, rgba(255,255,255,.38) 39px 40px), repeating-linear-gradient(0deg, transparent 0 38px, rgba(255,255,255,.38) 39px 40px); }
 .profile-placeholder::before, .profile-placeholder::after { content: ''; position: absolute; border-radius: 50%; background: #85c5e4; opacity: .56; }
 .profile-placeholder::before { width: 260px; height: 260px; top: -75px; right: -50px; }

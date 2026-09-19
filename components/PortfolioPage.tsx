@@ -2,6 +2,7 @@
 
 import { ArrowDown, ArrowUpRight, BriefcaseBusiness, Code2, Download, Mail, MapPin, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Navbar } from './Navbar';
 import { ProjectCard } from './ProjectCard';
 import { Reveal } from './Reveal';
@@ -22,13 +23,13 @@ export function PortfolioPage() {
           <motion.p className="hero-lede" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .35, duration: .6 }}>I&apos;m Ongama Solange, a developer creating user-focused, scalable, and high-performance software solutions.</motion.p>
           <motion.div className="hero-actions" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .48 }}>
             <a href="#projects" className="button button-primary">View projects <ArrowUpRight size={17} /></a>
-            <a href="#contact" className="button button-ghost"><Download size={16} /> Request my CV</a>
+            <a href="/ONGAMA_SOLANGE_CV.pdf" className="button button-ghost" download><Download size={16} /> Download CV</a>
           </motion.div>
           <div className="hero-meta"><span><MapPin size={15} /> Gqeberha, South Africa</span><span><Mail size={15} /> ongamasolange240@gmail.com</span></div>
         </div>
         <motion.div className="hero-art" initial={{ opacity: 0, scale: .94 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: .3, duration: .9 }}>
           <div className="art-orbit orbit-one" /><div className="art-orbit orbit-two" />
-          <div className="profile-placeholder"><div className="profile-grid" /><div className="profile-initials">OS</div><span className="profile-caption">PROFILE IMAGE<br /><b>PLACEHOLDER</b></span></div>
+          <div className="profile-placeholder"><Image src="/profile.jpeg" alt="Ongama Solange" fill sizes="(max-width: 680px) 79vw, 390px" priority /><span className="profile-caption">ONGAMA SOLANGE<br /><b>SOFTWARE DEVELOPER</b></span></div>
           <div className="floating-note note-one"><Code2 size={17} /><span>Flutter<br /><b>& Web</b></span></div>
           <div className="floating-note note-two"><Sparkles size={16} /><span>Thoughtful<br /><b>by design</b></span></div>
           <div className="art-label">01 <span>/</span> 03</div>
@@ -42,7 +43,7 @@ export function PortfolioPage() {
 
       <section id="skills" className="skills-section section-block"><div className="section-wrap"><Reveal><p className="eyebrow">02 / Toolkit</p><div className="section-heading-row"><h2>Technologies &amp; <span>tools I use.</span></h2><p>Tools are only useful when they help make the work clearer. These are the technologies I currently build with.</p></div></Reveal><div className="skills-grid">{skills.map((skill, index) => { const Icon = skill.icon; return <Reveal key={skill.name} delay={index * .035}><div className="skill-card"><Icon size={20} strokeWidth={1.7} /><span>{skill.name}</span><small>{skill.category}</small></div></Reveal>; })}</div></div></section>
 
-      <section id="experience" className="experience section-wrap section-block"><Reveal><p className="eyebrow">03 / Experience</p><div className="section-heading-row"><h2>Where I&apos;ve<br /><span>been learning.</span></h2></div></Reveal><div className="experience-layout"><div className="timeline-line" />{experience.map((item) => <Reveal key={item.company} className="experience-item"><div className="timeline-dot" /><div className="experience-period">{item.period}</div><div><p className="eyebrow">{item.company}</p><h3>{item.role}</h3><p>{item.description}</p></div><BriefcaseBusiness className="experience-icon" size={30} /></Reveal>)}<Reveal className="education-item"><div className="timeline-dot" /><div className="experience-period">Education</div><div><p className="eyebrow">{education[0].institution}</p><h3>{education[0].qualification}</h3></div></Reveal></div></section>
+      <section id="experience" className="experience section-wrap section-block" aria-labelledby="experience-title"><Reveal><p className="eyebrow">03 / Experience</p><div className="section-heading-row"><h2 id="experience-title">Where I&apos;ve<br /><span>been learning.</span></h2></div></Reveal><div className="experience-layout"><div className="timeline-line" />{experience.map((item) => <Reveal key={`${item.company}-${item.role}`} className="experience-item"><div className="timeline-dot" /><div className="experience-period">{item.period}</div><div><p className="eyebrow">{item.company}</p><h3>{item.role}</h3><p>{item.description}</p></div><BriefcaseBusiness className="experience-icon" size={30} aria-hidden="true" /></Reveal>)}{education.map((item) => <Reveal key={`${item.institution}-${item.qualification}`} className="education-item"><div className="timeline-dot" /><div className="experience-period">Education</div><div><p className="eyebrow">{item.institution}</p><h3>{item.qualification}</h3></div></Reveal>)}</div></section>
 
       <section id="projects" className="projects-section section-block"><div className="section-wrap"><Reveal><p className="eyebrow">04 / Selected work</p><div className="section-heading-row"><h2>Projects with<br /><span>room to grow.</span></h2><p>A collection of portfolio projects representing my interest in useful, practical software. More work is on the way.</p></div></Reveal><div className="projects-grid">{projects.map((project, index) => <Reveal key={project.title} delay={index * .1}><ProjectCard project={project} /></Reveal>)}</div></div></section>
 
